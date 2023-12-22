@@ -1,0 +1,582 @@
+body {
+  background-color: rgba(240, 219, 255, 1);
+  font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.nav-item {
+  font-size: 2rem;
+}
+
+.navbar-nav {
+  display: inline-block !important;
+  font-size: 2rem;
+}
+
+#getStarted {
+  background: rgba(116, 129, 254, 0.666667);
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#getStarted1 {
+  background: rgba(255, 115, 81, 1);
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+}
+
+nav {
+  border-color: black !important;
+  --bs-border-color: black;
+}
+
+/* Efficiency Unleashed, Productivity Redefined */
+
+#quote {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 7.5rem;
+  text-align: center;
+  margin-top: 7rem;
+  color: #000000;
+}
+
+#free {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  /* identical to box height */
+  text-align: center;
+}
+
+#free1 {
+  display: none;
+}
+
+/* Login.html */
+
+/* Changes made:
+
+Added a .container class to the HTML to wrap both the #left and #right elements.
+Applied flexbox to the .container to make it a flex container.
+Applied flex: 1; to both #left and #right to make them share the available space equally.
+Removed the width property from both #left and #right as the flex property will handle the width distribution.
+Added some padding for spacing inside the #left and #right elements.
+With these changes, the #left div will be on the left side, and the #right span will be on the right side, each taking up 50% of the viewport width. Adjust the padding values as needed for spacing. */
+
+#container {
+  display: flex;
+  height: 100vh;
+}
+
+#left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px; /* Added padding for spacing */
+}
+
+#right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Added padding for spacing */
+}
+
+#welcome {
+  padding-top: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  text-align: center;
+}
+
+#get {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header-title {
+  color: #8525ff;
+  font-weight: 800;
+  font-size: 38px;
+}
+
+.login-heading {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.select-method {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.login-method {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.username-input,
+.password-input {
+  width: 300px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  opacity: 0.7;
+  background-color: #e7efff;
+}
+
+.login-button {
+  color: #fff;
+  background-color: #8525ff;
+  width: 300px;
+  padding: 10px 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 11px;
+  transition: all 0.5s;
+}
+
+.login-button:hover,
+.login-button:active {
+  background-color: rgba(133, 37, 255, 0.5);
+}
+
+.sign-up {
+  text-align: right;
+  margin-top: -5px;
+}
+
+.signup-button {
+  color: #fff;
+  background-color: #8525ff;
+  width: 300px;
+  padding: 10px 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 11px;
+  transition: all 0.5s;
+}
+
+.signup-button:hover,
+.signup-button:active {
+  background-color: rgba(133, 37, 255, 0.5);
+}
+
+.signup-button:hover,
+.signup-button:active {
+  background-color: rgba(133, 37, 255, 0.5);
+}
+
+.login {
+  text-align: right;
+  margin-top: -5px;
+}
+
+
+#container {
+  display: flex;
+  height: 100vh; /* Make the container take up the full height of the viewport */
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 25%; /* 1/4 of the view width */
+  padding: 1.25rem; /* 20px converted to rem */
+  box-sizing: border-box;
+}
+
+#user-info-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* Adjust margin as needed */
+}
+
+#sidebar img {
+  border-radius: 50%; /* Optional: Make the image a circle */
+  margin-bottom: 1rem; /* 10px converted to rem */
+  margin-right: 1rem;
+}
+
+#username,
+.list-link,
+.label-link,
+.bottom-link,
+#toDo-welcome,
+#toDo-quote,
+#toDo-date,
+#number,
+#month,
+.toDo-label,
+.toDo-text,
+#addToDo-label,
+#addToDo-button,
+input::placeholder,
+input {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  /* Adjust the values as needed for your design */
+}
+
+#username {
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0rem; /* 20px converted to rem */
+}
+
+.list-link,
+.label-link,
+.bottom-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem; /* Followed your specified font size */
+  line-height: 2.25rem; /* Followed your specified line height */
+  text-align: center;
+  display: block;
+  color: #000000; /* Optional: Set a link color */
+  text-decoration: none;
+  margin-bottom: 0.2rem; /* 10px converted to rem */
+}
+
+#tagLabel {
+  overflow-y: auto;
+  flex: 1;
+}
+
+#inside-sidebar-list {
+  padding-left: 1.25rem; /* 20px converted to rem */
+  overflow-y: auto;
+}
+
+.signout {
+  margin-bottom: 1rem;
+  flex: 1;
+  align-items: end;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  background-color: #f7f7f7;
+  width: 75%; /* 3/4 of the view width */
+  padding: 1.25rem; /* 20px converted to rem */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#toDo-welcome {
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 3.75rem; */
+  /* identical to box height */
+  color: #000000;
+}
+
+#toDo-quote {
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 3.75rem; */
+  /* identical to box height */
+  color: #d8d8d8;
+}
+
+#toDo-date {
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 60px; */
+  color: #a1a1a1;
+}
+
+#number {
+  font-style: normal;
+  font-weight: 700;
+  /* line-height: 60px; */
+  color: #000000;
+}
+
+#month {
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 60px; */
+  color: #dfdede;
+}
+
+#allToDo {
+  overflow-y: auto;
+  flex: 1; /* Fill the remaining space */
+  /* Specify a max-height if you want to limit the height */
+  max-height: 50vh; /* Adjust as needed */
+}
+
+.toDo {
+  width: 100%;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.text {
+  flex: 1; /* Make the text div take the available space */
+  padding: 0 2rem; /* Adjust padding as needed */
+  box-sizing: border-box;
+}
+
+#checkList {
+  box-sizing: border-box;
+  background: none;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.toDo-label {
+  font-style: normal;
+  font-weight: 400;
+  /* identical to box height */
+  /* text-align: center; */
+
+  color: #a6a5a5;
+}
+
+.toDo-text {
+  font-style: normal;
+  font-weight: 400;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.delete-button {
+  order: 3; /* Set the order of the button to 3 (move it to the end) */
+}
+
+.toDo.checked {
+  background-color: #d8d8d8;
+}
+
+.delete-button, #checkList {
+  border: none;
+  background: none;
+}
+
+#addToDo {
+  width: 100%;
+  height: 77px;
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#addToDo-label {
+  cursor: pointer;
+}
+
+input::placeholder, input,
+#addToDo-label {
+  margin-left: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #b4b4b4;
+  border: none;
+  outline: none;
+}
+
+input {
+  width: 90%;
+  color: #000000;
+}
+
+@media only screen and (max-width: 893px) {
+  #quote {
+    font-size: 4rem;
+  }
+  #free {
+    display: none;
+  }
+  #free1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    /* identical to box height */
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 794px) {
+  #googleButton {
+    max-width: 21rem;
+    width: 20rem;
+  }
+  .toDo {
+    height: 25%;
+  }
+  #checkList {
+    width: 20px;
+    height: 20px;
+  }
+  .delete-button {
+    width: 20px;
+    height: 20px;
+  }
+  #addToDo {
+    height: 10%;
+  }
+  #addToDo-button {
+    margin-left: 0rem;
+  }
+}
+
+@media only screen and (max-width: 707px) {
+  #getStarted1 {
+    margin-top: 2.5rem;
+  }
+  #bottomLogo {
+    display: none !important;
+  }
+  #logoName {
+    display: none;
+  }
+  #quote {
+    font-size: 3.125rem;
+    line-height: 4rem;
+    font-weight: 200;
+  }
+  /* #login {
+    margin-right: 2rem;
+  } */
+  #container {
+    flex-direction: column;
+  }
+  #welcome {
+    padding-top: 5rem;
+  }
+  #left,
+  #right {
+    flex: 1;
+    width: 100%;
+  }
+  #loginLogo {
+    max-width: 55%;
+  }
+}
+
+@media only screen and (max-width: 604px) {
+  #loginLogo {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 493px) {
+  #getStarted {
+    display: none !important;
+  }
+  #getStarted1 {
+    margin-top: 1rem;
+  }
+  #bottomLogo {
+    display: none !important;
+  }
+  #logoName {
+    display: none;
+  }
+  #quote {
+    font-size: 3.125rem;
+    line-height: 4rem;
+    font-weight: 200;
+    margin-top: 2rem;
+  }
+  #login {
+    margin-right: 2rem;
+  }
+  #loginLogo {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 43.75rem) {
+  #welcome {
+    padding-top: 0rem;
+  }
+  #left {
+    align-items: center;
+    justify-content: center;
+  }
+  #loginLogo {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #sidebar {
+    display: none;
+  }
+  #main-content {
+    width: 100%;
+    height: 100vw;
+  }
+}
