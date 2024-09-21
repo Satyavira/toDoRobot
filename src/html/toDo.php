@@ -17,6 +17,10 @@
   session_start();
   require_once 'db.php';
   require_once 'function.php';
+  if(!isset($_SESSION["login"])) {
+    header("Location: ./index.php");
+    exit;
+  }
   $userId = $_SESSION['id_user'];
   $username = $_SESSION['username'];
 
