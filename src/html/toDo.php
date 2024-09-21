@@ -16,6 +16,7 @@
   // (A) NOT LOGGED IN
   session_start();
   require_once 'db.php';
+  require_once 'function.php';
   $userId = $_SESSION['id_user'];
   $username = $_SESSION['username'];
 
@@ -29,7 +30,7 @@
   // Query for unchecked to-do items
   $queryUnchecked = "SELECT *
                     FROM toDoList
-                    WHERE checkList != true AND (content LIKE ? OR userId LIKE ?)
+                    WHERE checkList != true AND (content LIKE ? AND userId LIKE ?)
                     ORDER BY createdAt DESC";
   $stmtUnchecked = $conn->prepare($queryUnchecked);
   $stmtUnchecked->bind_param("ss", $search, $userId);
@@ -39,7 +40,7 @@
   // Query for checked to-do items
   $queryChecked = "SELECT *
                     FROM toDoList
-                    WHERE checkList != false AND (content LIKE ? OR userId LIKE ?)
+                    WHERE checkList != false AND (content LIKE ? AND userId LIKE ?)
                     ORDER BY createdAt DESC";
   $stmtChecked = $conn->prepare($queryChecked);
   $stmtChecked->bind_param("ss", $search, $userId);
@@ -47,13 +48,7 @@
   $toDoListsChecked = $stmtChecked->get_result()->fetch_all(MYSQLI_ASSOC);
 
   // Query for distinct labels
-  $queryLabels = "SELECT DISTINCT label
-                    FROM toDoList
-                    WHERE content LIKE ? OR userId LIKE ?";
-  $stmtLabels = $conn->prepare($queryLabels);
-  $stmtLabels->bind_param("ss", $search, $userId);
-  $stmtLabels->execute();
-  $labels = $stmtLabels->get_result()->fetch_all(MYSQLI_ASSOC);
+  $labels = getLabel();
   ?>
 
   <div id="container">
@@ -62,9 +57,6 @@
       <div id="user-info-container">
         <span id="username"><?= $user['name'] ?></span>
       </div>
-      <ul class="nav flex-column" id="sidebar-list">
-        <li class="nav-item"><a class="nav-link list-link" href="#">My List</a></li>
-      </ul>
       <ul class="nav flex-column"><a class="nav-link list-link" href="#" id="tagLabel">Tags</a>
         <ul class="nav" id="inside-sidebar-list">
           <?php if (count($labels) > 0 && $labels !== null) : ?>

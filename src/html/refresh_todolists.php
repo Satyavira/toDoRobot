@@ -4,14 +4,15 @@
 // ... (Include necessary files and initialize any required variables)
 require_once 'db.php';
 
+session_start();
 // Your existing code to fetch updated to-do lists
 $search = isset($_GET['search']) ? $_GET['search'] : '';
-$userId = $_GET['userId'];
+$userId = $_SESSION['id_user'];
 $search = "%" . $search . "%";
 // Fetch to-do lists
 $stmt = $conn->prepare("SELECT * 
                         FROM toDoList 
-                        WHERE checkList != true AND (content LIKE ? OR userId LIKE ?) 
+                        WHERE checkList != true AND (content LIKE ? AND userId LIKE ?) 
                         ORDER BY createdAt DESC");
 $stmt->bind_param("ss", $search, $userId);
 $stmt->execute();
@@ -20,7 +21,7 @@ $toDoLists = $result->fetch_all(MYSQLI_ASSOC);
 
 $stmt = $conn->prepare("SELECT *
                         FROM toDoList
-                        WHERE checkList != false AND (content LIKE ? OR userId LIKE ?)
+                        WHERE checkList != false AND (content LIKE ? AND userId LIKE ?)
                         ORDER BY createdAt DESC");
 $stmt->bind_param("ss", $search, $userId);
 $stmt->execute();

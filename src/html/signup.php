@@ -1,5 +1,5 @@
 <?php
-require "db.php";
+require "function.php";
 
 if (isset($_POST["sign-up"])) {
     if (signUp($_POST) > 0) {
